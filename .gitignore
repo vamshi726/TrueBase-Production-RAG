@@ -1,0 +1,139 @@
+# ==========================================
+# Python / FastAPI Backend
+# ==========================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.bin/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Virtual Environments & Package Managers
+.venv/
+venv/
+ENV/
+env/
+.env
+.env.*
+!.env.example
+
+# IDEs, Editors & Tools
+.vscode/
+.idea/
+*.swp
+*.swo
+.project
+.pydevproject
+.settings/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+
+# ==========================================
+# React / Node.js Frontend (Vite / Next.js / CRA)
+# ==========================================
+# Dependencies
+node_modules/
+jspm_packages/
+
+# TypeScript
+*.tsbuildinfo
+.eslintcache
+.stylelintcache
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional Stylelint cache
+.stylelintcache
+
+# Output of 'npm run build'
+dist/
+build/
+.next/
+out/
+
+# Production / deployment artifacts
+.vercel
+.netlify
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Instrument output directories where test coverage reports might be generated
+coverage/
+*.lcov
+
+# Grunt intermediate storage (http://gruntjs.com/grunto-files.html)
+.cache/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file in React apps (CRA / Vite)
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Vite specific
+.vite/

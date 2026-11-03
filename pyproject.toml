@@ -1,0 +1,21 @@
+[project]
+name = "truebase-production-rag"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+"fastapi==0.115.12",              # Modern async web framework
+    "uvicorn[standard]==0.34.2",  # ASGI server to run FastAPI
+    "jinja2==3.1.6",              # HTML templating engine
+    "pydantic-settings==2.8.1",   # Settings and environment management
+    "boto3==1.37.38",             # AWS SDK for Python (S3, Bedrock, etc.)
+    "psycopg[binary,pool]==3.2.6",# PostgreSQL adapter with connection pooling
+    "pypdf==5.4.0",               # PDF parsing and manipulation
+    "python-docx==1.1.2",         # Microsoft Word document generation/reading
+    "httpx==0.28.1",              # Fully featured async HTTP client
+    "langgraph>=0.2,<2",          # Stateful, multi-actor LLM graph orchestration
+    "pinecone>=5,<9",             # Vector database for embeddings/search
+    "python-dotenv==1.0.1",       # Load environment variables from .env files
+    "glassflow-rius>=1.0,<2.0",   # Real-time data pipeline observability
+]
