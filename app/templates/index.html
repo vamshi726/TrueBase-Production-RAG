@@ -1,0 +1,549 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#0b101b">
+  <meta name="description" content="TrueBase Enterprise AI Knowledge Platform">
+
+  <title>TrueBase| Enterprise Knowledge</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="/static/css/styles.css?v=enterprise-2"
+  >
+</head>
+
+<body>
+
+<div class="shell">
+
+  <!-- ==================== SIDEBAR ==================== -->
+
+  <aside class="sidebar">
+
+    <!-- Brand -->
+    <div class="logo">
+      <div class="logo-icon">✦</div>
+
+      <div class="logo-content">
+        <span>TrueBase</span>
+        <small>Enterprise Intelligence</small>
+      </div>
+    </div>
+
+    <!-- Workspace -->
+    <div class="workspace-selector">
+      <div class="workspace-avatar">W</div>
+
+      <div class="workspace-info">
+        <strong>My Workspace</strong>
+        <span>Enterprise workspace</span>
+      </div>
+
+      <span class="workspace-chevron">⌄</span>
+    </div>
+
+    <!-- Navigation -->
+    <div class="sidebar-navigation">
+
+      <div class="eyebrow">WORKSPACE</div>
+
+      <nav class="nav-group" aria-label="Main navigation">
+
+        <button class="nav active" id="chatTab" type="button">
+          <span class="nav-icon">◈</span>
+          <span class="nav-label">Knowledge chat</span>
+          <span class="nav-indicator"></span>
+        </button>
+
+        <button class="nav" id="docsTab" type="button">
+          <span class="nav-icon">▤</span>
+          <span class="nav-label">Documents</span>
+        </button>
+
+        <button class="nav" id="approvalTab" type="button">
+          <span class="nav-icon">✓</span>
+          <span class="nav-label">Approvals</span>
+        </button>
+
+        <button class="nav" id="adminTab" type="button">
+          <span class="nav-icon">▥</span>
+          <span class="nav-label">Metrics</span>
+        </button>
+
+      </nav>
+
+      <!-- Platform information -->
+      <div class="sidebar-section">
+        <div class="eyebrow">PLATFORM</div>
+
+        <div class="sidebar-info-item">
+          <span class="sidebar-info-icon">◉</span>
+          <span>AI Knowledge Engine</span>
+          <span class="sidebar-status-dot"></span>
+        </div>
+
+        <div class="sidebar-info-item">
+          <span class="sidebar-info-icon">◇</span>
+          <span>Secure Workspace</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Sidebar footer -->
+    <div class="sidebottom">
+
+      <div class="system-status">
+        <span class="status-indicator"></span>
+
+        <div>
+          <strong>Workspace ready</strong>
+          <small>Demo environment</small>
+        </div>
+      </div>
+
+      <div class="sidebar-footer-divider"></div>
+
+      <div class="sidebar-footer-brand">
+        <div class="footer-avatar">A</div>
+
+        <div class="footer-user-info">
+          <strong>TrueBase Workspace</strong>
+          <small>Single-workspace demo · No login</small>
+        </div>
+      </div>
+
+    </div>
+
+  </aside>
+
+
+  <!-- ==================== MAIN ==================== -->
+
+  <main>
+
+    <!-- Header -->
+    <header>
+
+      <div class="header-left">
+
+        <div class="breadcrumb">
+          <span>Workspace</span>
+          <span class="breadcrumb-divider">/</span>
+          <span class="breadcrumb-current">Knowledge</span>
+        </div>
+
+        <div class="header-title-row">
+          <div>
+            <h1 id="heading">Ask your organization's knowledge</h1>
+            <p class="header-subtitle">
+              Your intelligent workspace for enterprise knowledge.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="header-right">
+
+        <div class="pill">
+          <span class="cloud-indicator"></span>
+          <span>AWS-powered</span>
+        </div>
+
+        <div class="header-avatar" title="TrueBase Workspace">
+          A
+        </div>
+
+      </div>
+
+    </header>
+
+
+    <!-- ==================== CHAT VIEW ==================== -->
+
+    <section id="chatView" class="panel">
+
+      <!-- Chat top toolbar -->
+      <div class="chat-toolbar">
+
+        <div class="chat-toolbar-left">
+          <div class="chat-toolbar-icon">✦</div>
+
+          <div>
+            <strong>Knowledge Assistant</strong>
+            <span>
+              <span class="online-dot"></span>
+              AI-powered document intelligence
+            </span>
+          </div>
+        </div>
+
+        <div class="chat-toolbar-right">
+          <div class="toolbar-tag">
+            ◈ &nbsp; Grounded AI
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- Welcome hero -->
+      <div class="hero">
+
+        <div class="hero-icon-wrapper">
+          <div class="spark">✦</div>
+        </div>
+
+        <div class="hero-eyebrow">
+          YOUR AI KNOWLEDGE ASSISTANT
+        </div>
+
+        <h2>Knowledge at your fingertips.</h2>
+
+        <p>
+          Ask questions, uncover insights, and get trusted answers
+          from your organization's approved knowledge.
+        </p>
+
+        <!-- Example prompts -->
+        <div class="suggestion-label">
+          TRY ASKING
+        </div>
+
+        <div class="suggestions">
+
+          <button
+            type="button"
+            data-q="What is our leave policy?"
+          >
+            <span class="suggestion-icon">▤</span>
+            <span>Leave policy</span>
+            <span class="suggestion-arrow">↗</span>
+          </button>
+
+          <button
+            type="button"
+            data-q="Summarize the onboarding process"
+          >
+            <span class="suggestion-icon">◈</span>
+            <span>Onboarding process</span>
+            <span class="suggestion-arrow">↗</span>
+          </button>
+
+          <button
+            type="button"
+            data-q="What are the IT security rules?"
+          >
+            <span class="suggestion-icon">◇</span>
+            <span>IT security rules</span>
+            <span class="suggestion-arrow">↗</span>
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- Conversation actions -->
+      <div class="conversation-actions">
+
+        <div class="conversation-label">
+          <span class="conversation-dot"></span>
+          Conversation
+        </div>
+
+        <button type="button" id="newChat">
+          <span>＋</span>
+          New conversation
+        </button>
+
+      </div>
+
+
+      <!-- Chat messages injected by JavaScript -->
+      <div
+        id="messages"
+        aria-live="polite"
+        aria-label="Chat conversation"
+        role="log"
+      ></div>
+
+
+      <!-- Composer -->
+      <form id="chatForm" class="composer">
+
+        <div class="composer-field">
+
+          <textarea
+            id="question"
+            rows="2"
+            placeholder="Ask anything about your company knowledge..."
+            aria-label="Ask a question"
+            required
+          ></textarea>
+
+          <div class="composer-footer">
+            <div class="composer-caption">
+              <span class="composer-caption-icon">✦</span>
+              Powered by enterprise knowledge
+            </div>
+
+            <span class="keyboard-hint">AI ASSISTANT</span>
+          </div>
+
+        </div>
+
+        <button type="submit" class="send-button">
+          <span>Send</span>
+          <span class="send-arrow">↗</span>
+        </button>
+
+      </form>
+
+      <div class="hint">
+        <span>◇</span>
+        AI responses may contain errors. Verify source passages
+        before making decisions.
+      </div>
+
+    </section>
+
+
+    <!-- ==================== DOCUMENTS VIEW ==================== -->
+
+    <section id="docsView" class="panel hidden">
+
+      <div class="section-header">
+
+        <div>
+          <div class="section-eyebrow">
+            KNOWLEDGE MANAGEMENT
+          </div>
+
+          <h2>Knowledge library</h2>
+
+          <p>
+            Manage the documents that power your organization's
+            AI knowledge assistant.
+          </p>
+        </div>
+
+        <div class="section-header-icon">▤</div>
+
+      </div>
+
+
+      <!-- Upload -->
+      <div class="upload-container">
+
+        <div class="upload-header">
+
+          <div class="upload-icon">↑</div>
+
+          <div>
+            <h3>Add knowledge to your workspace</h3>
+            <p>
+              Upload approved documents to make knowledge
+              accessible through AI-powered search.
+            </p>
+          </div>
+
+        </div>
+
+        <form id="uploadForm">
+
+          <div class="file-input-wrapper">
+            <input
+              id="file"
+              type="file"
+              accept=".pdf,.docx,.txt,.md"
+              aria-label="Select document"
+              required
+            >
+          </div>
+
+          <button type="submit">
+            <span>↑</span>
+            Upload document
+          </button>
+
+        </form>
+
+        <div class="upload-footer">
+          <span>◇ &nbsp; PDF, DOCX, TXT, Markdown</span>
+          <span>Use non-sensitive demo documents only</span>
+        </div>
+
+      </div>
+
+
+      <!-- Document list -->
+      <div class="library-header">
+
+        <div>
+          <h3>Workspace documents</h3>
+          <p>Documents available to the AI knowledge engine</p>
+        </div>
+
+        <div class="library-badge">Knowledge sources</div>
+
+      </div>
+
+      <div id="docs"></div>
+
+    </section>
+
+
+    <!-- ==================== APPROVALS VIEW ==================== -->
+
+    <section id="approvalView" class="panel hidden">
+
+      <div class="section-header">
+
+        <div>
+          <div class="section-eyebrow">
+            HUMAN OVERSIGHT
+          </div>
+
+          <h2>Human-in-the-loop approvals</h2>
+
+          <p>
+            Review AI-generated requests and maintain human
+            control over important decisions.
+          </p>
+        </div>
+
+        <button type="button" id="refreshApprovals">
+          <span>↻</span>
+          Refresh
+        </button>
+
+      </div>
+
+
+      <!-- Approval information -->
+      <div class="approval-info-banner">
+
+        <div class="approval-info-icon">◇</div>
+
+        <div>
+          <strong>Human oversight enabled</strong>
+
+          <p>
+            All decisions are reviewed before approval.
+            Approving records a decision only.
+            No documents are deleted or exported.
+          </p>
+        </div>
+
+      </div>
+
+
+      <!-- Approval summary -->
+      <div
+        id="approvalSummary"
+        role="status"
+      ></div>
+
+
+      <!-- Approval cards injected by JS -->
+      <div
+        id="approvalList"
+        aria-live="polite"
+      ></div>
+
+    </section>
+
+
+    <!-- ==================== METRICS VIEW ==================== -->
+
+    <section id="adminView" class="panel hidden">
+
+      <div class="section-header">
+
+        <div>
+          <div class="section-eyebrow">
+            WORKSPACE OBSERVABILITY
+          </div>
+
+          <h2>Workspace metrics</h2>
+
+          <p>
+            Monitor AI usage, knowledge operations,
+            and platform activity.
+          </p>
+        </div>
+
+        <div class="section-header-icon">▥</div>
+
+      </div>
+
+
+      <!-- Metrics section -->
+      <div class="metrics-container">
+
+        <div class="metrics-heading">
+          <div class="metrics-heading-icon">◫</div>
+
+          <div>
+            <h3>System overview</h3>
+            <p>Workspace operational metrics</p>
+          </div>
+
+          <span class="metrics-tag">SYSTEM</span>
+        </div>
+
+        <pre id="metrics">Loading metrics...</pre>
+
+      </div>
+
+
+      <!-- Guardrail events -->
+      <div class="metrics-container guardrail-container">
+
+        <div class="metrics-heading">
+
+          <div class="metrics-heading-icon">◇</div>
+
+          <div>
+            <h3>Guardrail events</h3>
+            <p>AI safety and validation monitoring</p>
+          </div>
+
+          <span class="metrics-tag">SAFETY</span>
+
+        </div>
+
+        <pre id="guardrailMetrics">
+Loading guardrail metrics...
+        </pre>
+
+      </div>
+
+    </section>
+
+
+    <!-- Toast notifications -->
+    <div id="toast" role="status" aria-live="polite"></div>
+
+  </main>
+
+</div>
+
+<script src="/static/js/app.js?v=chat-scroll-1"></script>
+
+</body>
+</html>
