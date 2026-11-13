@@ -15,10 +15,15 @@ def index():
     s = settings()
     if not s.pinecone_api_key:
         raise RuntimeError("PINECONE_API_KEY is missing from .env")
-    if not s.pinecone_index_name:
-        raise RuntimeError("PINECONE_INDEX_NAME is missing from .env")
     pc = Pinecone(api_key=s.pinecone_api_key)
-    name = s.pinecone_index_name
+    configured_host = s.pinecone_index_host.strip()
+    if configured_host and "." in configured_host:
+        log.info('Connecting to configured Pinecone index host')
+        return pc.Index(host=configured_host)
+    # Older environments stored the index name under PINECONE_INDEX_HOST.
+    name = s.pinecone_index_name.strip() or configured_host
+    if not name:
+        raise RuntimeError("Set PINECONE_INDEX_HOST or PINECONE_INDEX_NAME in .env")
     # Describe rather than list: avoids listing every index and works for existing indexes.
     try:
         info = pc.describe_index(name)

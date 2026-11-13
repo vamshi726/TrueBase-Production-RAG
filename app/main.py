@@ -1,8 +1,9 @@
 import re
 import uuid
+import logging
 from pathlib import Path
 from fastapi import FastAPI, Depends, HTTPException, Request
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel, Field
@@ -26,6 +27,13 @@ BASE=Path(__file__).resolve().parent
 app=FastAPI(title='Atlas Enterprise RAG',docs_url='/api/docs')
 app.mount('/static',StaticFiles(directory=BASE/'static'),name='static')
 templates=Jinja2Templates(directory=BASE/'templates')
+log=logging.getLogger(__name__)
+
+
+@app.exception_handler(Exception)
+async def unexpected_error(_request: Request, exc: Exception):
+    log.exception('Unhandled request error', exc_info=exc)
+    return JSONResponse(status_code=500,content={'detail':'Internal server error. Check the server logs.'})
 
 
 

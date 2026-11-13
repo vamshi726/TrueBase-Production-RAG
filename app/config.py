@@ -8,19 +8,20 @@ class Settings(BaseSettings):
     aws_access_key_id:str=''
     aws_secret_access_key:str=''
     s3_bucket:str=''
-    databse_url:str=''
+    database_url:str=''
     bedrock_embed_model:str='amazon.titan-embed-text-v2:0'
     bedrock_chat_model:str='amazon.nova-lite-v1:0'
     embed_dim:int=1024
-    max_upload_bytes:int='10485760'
-    pineconse_api_key:str=''
+    max_upload_bytes:int=10485760
+    pinecone_api_key:str=''
     pinecone_index_name:str=''
+    pinecone_index_host:str=''
     pinecone_cloud:str='aws'
     pinecone_region:str='us-east-1'
     pinecone_ready_timeout:int=180 
-    min_relevance:float=0.25
+    min_relevance:float=0.20
     hitl_enabled:bool=True
-    memory_truns:int=6
+    memory_turns:int=6
     
 @lru_cache    
 def settings() -> Settings:
